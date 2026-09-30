@@ -98,9 +98,22 @@
   <div class="card">
     <h1>Surendran Nair</h1>
     <h2>Diplom Wirtschaftsingenieur(FH)</h2>
-    <p>Email: <a href="mailto:mail@snair.de" class="email">mail@snair.de</a></p>
+    <a href="#" class="secure-mail" data-user="mail" data-domain="snair.de">E-Mail wird geladen...</a>
     <script language="JavaScript" src="https://www.besucherzaehler-kostenlos.de/js/counter.js.php?count=1&id=ySdq5rMjQQ&start=0&design=1c"></script>
   </div>
+  <script>
+  document.querySelectorAll('.secure-mail').forEach(function(element) {
+    var user = element.getAttribute('data-user');
+    var domain = element.getAttribute('data-domain');
+    var email = user + '@' + domain;
+    
+    // Aktiviert den normalen E-Mail-Link beim Klicken oder Hovern
+    element.setAttribute('href', 'mailto:' + email);
+    
+    // Ersetzt den Platzhalter-Text durch Ihre echte E-Mail-Adresse
+    element.textContent = email;
+  });
+</script>
 </body>
 </html>
 
