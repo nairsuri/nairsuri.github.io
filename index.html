@@ -116,69 +116,7 @@
   });
 </script>
 </body>
-</html>      padding: 10px 20px;
-      border-radius: 50px;
-      background: linear-gradient(135deg, #ff416c, #ff4b2b);
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .card a.button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    }
-
-    .email {
-    color: #ffffff; /* Weiß */
-    text-decoration: none; /* optional, entfernt Unterstreichung */
-    }
-
-    .email:hover {
-    text-decoration: underline; /* Unterstreichung beim Hover */
-    }
-    
-    .social-links {
-      margin-top: 25px;
-    }
-
-    .social-links a {
-      margin: 0 10px;
-      font-size: 1.5em;
-      color: #fff;
-      text-decoration: none;
-      transition: transform 0.2s;
-    }
-
-    .social-links a:hover {
-      transform: scale(1.2);
-    }
-  </style>
-</head>
-<body>
-  <main>
-  <div class="card">
-    <h1>Surendran Nair</h1>
-    <h2>Diplom Wirtschaftsingenieur(FH) Leistungen: Unternehmensberatung in den Disziplinen Vertrieb, Vetriebsprozesse und IT-Systeme</h2>
-    <a href="#" class="secure-mail" data-user="mail" data-domain="snair.de">E-Mail wird geladen...</a>
-  </div>
-  <script>
-  document.querySelectorAll('.secure-mail').forEach(function(element) {
-    var user = element.getAttribute('data-user');
-    var domain = element.getAttribute('data-domain');
-    var email = user + '@' + domain;
-    
-    // Aktiviert den normalen E-Mail-Link beim Klicken oder Hovern
-    element.setAttribute('href', 'mailto:' + email);
-    
-    // Ersetzt den Platzhalter-Text durch Ihre echte E-Mail-Adresse
-    element.textContent = email;
-  });
-</script>
-  </main>
-  <footer>
+  
    <script language="JavaScript" src="https://www.besucherzaehler-kostenlos.de/js/counter.js.php?count=1&id=ySdq5rMjQQ&start=0&design=1c"></script>
-  </footer>
-</body>
+
 </html>
