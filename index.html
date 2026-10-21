@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Surendran Nair – Unternehmensberatung Vertrieb &amp; IT</title>
+<meta name="description" content="Surendran Nair, Dipl.-Wirtschaftsingenieur (FH): Unternehmensberatung für Vertrieb, Vertriebsprozesse und IT-Unterstützung.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="card glass">
+  <header>
+    <h1>Surendran Nair</h1>
+    <p class="role">Dipl.-Wirtschaftsingenieur (FH)<br>Unternehmensberatung</p>
+  </header>
+
+  <section aria-labelledby="schwerpunkte">
+    <h2 id="schwerpunkte">Schwerpunkte</h2>
+    <ul class="services">
+      <li><strong>Vertrieb</strong><span>Strategie, Aufbau und Steuerung von Vertriebsaktivitäten.</span></li>
+      <li><strong>Vertriebsprozesse</strong><span>Abläufe analysieren, vereinfachen und messbar machen.</span></li>
+      <li><strong>IT-Unterstützung</strong><span>Passende Werkzeuge und Systeme für den Vertriebsalltag.</span></li>
+    </ul>
+  </section>
+
+  <section class="contact" aria-labelledby="kontakt">
+    <h2 id="kontakt">Kontakt</h2>
+    <a class="btn" id="mail" href="#kontakt" role="button">E-Mail schreiben</a>
+    <noscript><p>Bitte JavaScript aktivieren, um das Kontaktfeld zu nutzen, oder siehe Impressum.</p></noscript>
+  </section>
+</main>
+
+<footer class="glass">
+  <a href="impressum.html">Impressum</a>
+  <a href="datenschutz.html">Datenschutz</a>
+  <span id="zaehler" hidden>Seitenaufrufe: <strong id="anzahl"></strong></span>
+</footer>
+
+<script>
+  // E-Mail: nicht im Klartext im Quelltext. Wird erst beim Klick zusammengesetzt.
+  // Eigene Adresse kodieren: in der Browser-Konsole  btoa("deine@adresse.de".split("").reverse().join(""))
+  var kodiert = "ZWQucmlhbnNAdGthdG5vaw==";
+  document.getElementById("mail").addEventListener("click", function (e) {
+    e.preventDefault();
+    window.location.href = "mailto:" + atob(kodiert).split("").reverse().join("");
+  });
+
+  // Besucherzähler über GoatCounter (cookiefrei). Eigenen Code eintragen, z. B. "snair"
+  // für https://snair.goatcounter.com. Leer lassen = Zähler bleibt aus und unsichtbar.
+  var GC = "";
+  if (GC) {
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://gc.zgo.at/count.js";
+    s.setAttribute("data-goatcounter", "https://" + GC + ".goatcounter.com/count");
+    s.onload = function () {
+      setTimeout(function () {
+        var pfad = window.goatcounter.get_data().p;
+        fetch("https://" + GC + ".goatcounter.com/counter/" + encodeURIComponent(pfad) + ".json")
+          .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+          .then(function (d) {
+            document.getElementById("anzahl").textContent = d.count;
+            document.getElementById("zaehler").hidden = false;
+          })
+          .catch(function () {});
+      }, 800);
+    };
+    document.head.appendChild(s);
+  }
+</script>
+</body>
+</html>
