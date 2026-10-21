@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Surendran Nair – Unternehmensberatung Vertrieb &amp; IT</title>
+<meta name="description" content="Surendran Nair, Dipl.-Wirtschaftsingenieur (FH): Unternehmensberatung für Vertrieb, Vertriebsprozesse und IT-Unterstützung.">
+<style>
+:root{
+  --bg1:#dbe8ff; --bg2:#b4cffd;
+  --blob1:#5b8cff; --blob2:#7fe0ff; --blob3:#b49cff;
+  --ink:#0b1f3a; --muted:#3d5170;
+  --glass:rgba(255,255,255,.38); --glass-strong:rgba(255,255,255,.5);
+  --edge:rgba(255,255,255,.75); --shade:rgba(20,50,110,.18);
+  --accent:#1d4ed8; --accent-ink:#ffffff;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg1:#070d1d; --bg2:#0d1a38;
+    --blob1:#2b5bff; --blob2:#1397c9; --blob3:#6a4cd6;
+    --ink:#eaf1ff; --muted:#a9bad6;
+    --glass:rgba(255,255,255,.08); --glass-strong:rgba(255,255,255,.14);
+    --edge:rgba(255,255,255,.28); --shade:rgba(0,0,0,.45);
+    --accent:#7aa7ff; --accent-ink:#06142e;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; min-height:100vh; display:flex; flex-direction:column; align-items:center;
+  justify-content:center; gap:1.25rem; padding:1.5rem 1rem; position:relative; overflow-x:hidden;
+  background:linear-gradient(160deg,var(--bg1),var(--bg2)) fixed; color:var(--ink);
+  font:1rem/1.6 system-ui,-apple-system,"SF Pro Text","Segoe UI",Roboto,sans-serif;
+}
+/* Farbflächen hinter dem Glas, damit die Unschärfe etwas zu brechen hat */
+body::before,body::after{content:""; position:fixed; z-index:-1; border-radius:50%; filter:blur(60px); opacity:.85}
+body::before{width:26rem; height:26rem; background:var(--blob1); top:-6rem; left:-7rem}
+body::after{width:30rem; height:30rem; background:radial-gradient(circle at 30% 30%,var(--blob2),var(--blob3)); bottom:-10rem; right:-9rem}
+
+.glass{
+  background:var(--glass);
+  -webkit-backdrop-filter:blur(28px) saturate(180%); backdrop-filter:blur(28px) saturate(180%);
+  border:1px solid var(--edge);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.55),
+    inset 0 -1px 0 rgba(255,255,255,.12),
+    0 18px 50px var(--shade);
+}
+.card{
+  width:100%; max-width:40rem; border-radius:2rem;
+  padding:clamp(1.5rem,5vw,3rem);
+}
+h1{margin:0; font-size:clamp(2rem,7vw,3rem); line-height:1.1; letter-spacing:-.025em; font-weight:700}
+.role{margin:.6rem 0 0; color:var(--muted); font-size:1.0625rem}
+h2{margin:2rem 0 .75rem; font-size:1.0625rem; font-weight:650}
+.services{list-style:none; margin:0; padding:0; display:grid; gap:.6rem}
+.services li{
+  padding:.85rem 1.1rem; border-radius:1.25rem;
+  background:var(--glass-strong); border:1px solid var(--edge);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.45);
+}
+.services strong{display:block; font-weight:650}
+.services span{color:var(--muted); font-size:.9375rem}
+.contact{margin-top:2rem}
+.btn{
+  display:inline-block; padding:.8rem 1.5rem; border-radius:999px;
+  background:var(--accent); color:var(--accent-ink); font-weight:650; text-decoration:none;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.45), 0 8px 22px color-mix(in srgb,var(--accent) 45%,transparent);
+  transition:transform .15s ease, filter .15s ease;
+}
+.btn:hover{filter:brightness(1.08); transform:translateY(-1px)}
+a:focus-visible{outline:3px solid var(--accent); outline-offset:3px}
+footer{display:flex; flex-wrap:wrap; justify-content:center; gap:.25rem 1.25rem; padding:.5rem 1.25rem; border-radius:999px; font-size:.875rem; color:var(--muted)}
+footer a{color:inherit}
+
+/* Fallbacks */
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  :root{--glass:rgba(255,255,255,.85); --glass-strong:rgba(255,255,255,.95)}
+  @media (prefers-color-scheme:dark){:root{--glass:rgba(20,32,60,.92); --glass-strong:rgba(30,45,80,.95)}}
+}
+@media (prefers-reduced-transparency:reduce){
+  .glass{-webkit-backdrop-filter:none; backdrop-filter:none; background:var(--glass-strong)}
+}
+@media (prefers-reduced-motion:reduce){.btn{transition:none}}
+</style>
+</head>
+<body>
+
+<main class="card glass">
+  <header>
+    <h1>Surendran Nair</h1>
+    <p class="role">Dipl.-Wirtschaftsingenieur (FH)<br>Unternehmensberatung</p>
+  </header>
+
+  <section aria-labelledby="schwerpunkte">
+    <h2 id="schwerpunkte">Schwerpunkte</h2>
+    <ul class="services">
+      <li><strong>Vertrieb</strong><span>Strategie, Aufbau und Steuerung von Vertriebsaktivitäten.</span></li>
+      <li><strong>Vertriebsprozesse</strong><span>Abläufe analysieren, vereinfachen und messbar machen.</span></li>
+      <li><strong>IT-Unterstützung</strong><span>Passende Werkzeuge und Systeme für den Vertriebsalltag.</span></li>
+    </ul>
+  </section>
+
+  <section class="contact" aria-labelledby="kontakt">
+    <h2 id="kontakt">Kontakt</h2>
+    <a class="btn" id="mail" href="#kontakt" role="button">E-Mail schreiben</a>
+    <noscript><p>Bitte JavaScript aktivieren, um das Kontaktfeld zu nutzen, oder siehe Impressum.</p></noscript>
+  </section>
+</main>
+
+<footer class="glass">
+  <a href="impressum.html">Impressum</a>
+  <a href="datenschutz.html">Datenschutz</a>
+  <span id="zaehler" hidden>Seitenaufrufe: <strong id="anzahl"></strong></span>
+</footer>
+
+<script>
+  // E-Mail: nicht im Klartext im Quelltext. Wird erst beim Klick zusammengesetzt.
+  // Eigene Adresse kodieren: in der Browser-Konsole  btoa("deine@adresse.de".split("").reverse().join(""))
+  var kodiert = "ZWQucmlhbnNAdGthdG5vaw==";
+  document.getElementById("mail").addEventListener("click", function (e) {
+    e.preventDefault();
+    var adr = atob(kodiert).split("").reverse().join("");
+    window.location.href = "mailto:" + adr;
+  });
+
+  // Besucherzähler (benötigt counter.php auf dem Server; sonst bleibt er unsichtbar)
+  fetch("counter.php", { cache: "no-store" })
+    .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+    .then(function (d) {
+      if (typeof d.count !== "number") return;
+      document.getElementById("anzahl").textContent = d.count.toLocaleString("de-DE");
+      document.getElementById("zaehler").hidden = false;
+    })
+    .catch(function () {});
+</script>
+</body>
+</html>
