@@ -56,8 +56,27 @@
   });
 
   // Besucherzähler über GoatCounter (cookiefrei). Eigenen Code eintragen, z. B. "snair"
-  data-goatcounter="https://snair.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js">
+  // für https://snair.goatcounter.com. Leer lassen = Zähler bleibt aus und unsichtbar.
+  var GC = "snair";
+  if (GC) {
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://gc.zgo.at/count.js";
+    s.setAttribute("data-goatcounter", "https://" + GC + ".goatcounter.com/count");
+    s.onload = function () {
+      setTimeout(function () {
+        var pfad = window.goatcounter.get_data().p;
+        fetch("https://" + GC + ".goatcounter.com/counter/" + encodeURIComponent(pfad) + ".json")
+          .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+          .then(function (d) {
+            document.getElementById("anzahl").textContent = d.count;
+            document.getElementById("zaehler").hidden = false;
+          })
+          .catch(function () {});
+      }, 800);
+    };
+    document.head.appendChild(s);
+  }
 </script>
 </body>
 </html>
