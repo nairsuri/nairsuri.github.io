@@ -98,11 +98,19 @@ footer a{color:inherit}
 .todo{background:rgba(255,196,0,.35); border-radius:.25rem; padding:0 .25rem}
 
 .profile-container {
-  display: block;      /* Verhält sich wie ein Block-Element */
-  margin-left: auto;   /* Schiebt das Element von links in die Mitte */
-  margin-right: auto;  /* Schiebt das Element von rechts in die Mitte */
-  margin-bottom: 1.5rem; /* Hält einen sauberen Abstand nach unten zum Namen */
+  position: relative;
+  width: 140px;  
+  height: 140px; 
+  
+  /* Das sorgt für die exakt gleiche Aufteilung links und rechts sowie Abstand nach unten */
+  margin: 0 auto 1.5rem auto !important; 
+  
+  border-radius: 1.25rem; 
+  overflow: hidden;
+  box-shadow: 0 8px 24px var(--shade);
+  border: 1px solid var(--edge);
 }
+
 
 }
 
