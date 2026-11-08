@@ -9,6 +9,14 @@
 </head>
 <body>
 
+  <div class="profile-container">
+  <!-- Das eigentliche Foto -->
+  <img src="mein-foto.jpg" alt="Profilfoto" class="mein-foto">
+  <!-- Die unsichtbare Schutzschicht darüber -->
+  <div class="foto-schloss"></div>
+  </div>
+
+  
 <main class="card glass">
   <header>
     <h1>Surendran Nair</h1>
@@ -56,10 +64,15 @@
     mailElem.addEventListener("click", function (e) {
       e.preventDefault();
       window.location.href = "mailto:" + atob(kodiert).split("").reverse().join("");
+       // Zusätzlicher Rechtsklick-Schutz für den Foto-Bereich
+  var container = document.querySelector('.profile-container');
+  if (container) {
+    container.addEventListener('contextmenu', function (e) {
+      e.preventDefault(); // Blockiert das Kontextmenü vollständig
     });
   }
 </script>
-
+   
 <!-- 2. Der unsichtbare Besucherzähler über GoatCounter -->
 <script data-goatcounter="https://snair.goatcounter.com/count" 
         async src="//gc.zgo.at/count.js"></script>
