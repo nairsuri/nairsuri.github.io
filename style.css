@@ -100,10 +100,10 @@ footer a{color:inherit}
 /* Container für das Foto und die Schutzschicht */
 .profile-container {
   position: relative;
-  width: 140px;  /* Gewünschte Breite des Profilfotos */
-  height: 140px; /* Gewünschte Höhe des Profilfotos */
+  width: 140px;  
+  height: 140px; 
   margin: 0 auto 1.5rem; /* Das "margin: 0 auto" sorgt für die perfekte Zentrierung innerhalb der Karte */
-  border-radius: 1.25rem; /* Leicht abgerundete Ecken passend zum Design */
+  border-radius: 1.25rem; 
   overflow: hidden;
   box-shadow: 0 8px 24px var(--shade);
   border: 1px solid var(--edge);
