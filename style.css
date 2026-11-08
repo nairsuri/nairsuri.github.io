@@ -102,7 +102,7 @@ footer a{color:inherit}
   position: relative;
   width: 140px;  /* Gewünschte Breite des Profilfotos */
   height: 140px; /* Gewünschte Höhe des Profilfotos */
-  margin: 0 auto 1.5rem; /* Zentriert das Foto und hält Abstand nach unten */
+  margin: 0 auto 1.5rem; /* Das "margin: 0 auto" sorgt für die perfekte Zentrierung innerhalb der Karte */
   border-radius: 1.25rem; /* Leicht abgerundete Ecken passend zum Design */
   overflow: hidden;
   box-shadow: 0 8px 24px var(--shade);
