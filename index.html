@@ -70,6 +70,11 @@
       e.preventDefault(); // Blockiert das Kontextmenü vollständig
     });
   }
+      // Entfernt /index.html automatisch aus der Adresszeile des Browsers
+if (window.location.pathname.endsWith('/index.html')) {
+  var cleanUrl = window.location.protocol + "//" + window.location.host + window.location.pathname.replace(/\/index\.html$/, '/');
+  window.history.replaceState({}, document.title, cleanUrl);
+}
 </script>
    
 <!-- 2. Der unsichtbare Besucherzähler über GoatCounter -->
