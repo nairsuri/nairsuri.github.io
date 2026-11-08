@@ -97,27 +97,26 @@ footer a{color:inherit}
 .back{display:inline-block; margin-bottom:1.25rem; font-size:.9375rem; color:var(--muted)}
 .todo{background:rgba(255,196,0,.35); border-radius:.25rem; padding:0 .25rem}
 
+/* Container für das Foto und die Schutzschicht */
 .profile-container {
-  position: relative;
-  width: 140px;  
-  height: 140px; 
-  /* Zwingt das Flexbox-System der Karte, das Foto EXAKT in der Mitte zu platzieren */
-  align-self: center !important; 
-  /* Hält 1.5rem Abstand nach unten zum Namen und berechnet links/rechts automatisch */
-  margin: 0 auto 1.5rem auto !important; 
-  border-radius: 1.25rem; 
-  overflow: hidden;
-  box-shadow: 0 8px 24px var(--shade), 0 0 12px color-mix(in srgb, #cd7f32 30%, transparent);
-  /* Dein dünner Rahmen in edlem Bronze */
-  border: 2px solid #cd7f32; 
+  position: relative !important;
+  width: 140px !important;  
+  height: 140px !important; 
+  border-radius: 1.25rem !important; 
+  overflow: hidden !important;
+  box-shadow: 0 8px 24px var(--shade) !important;
+  
+  /* Dein dünner Rahmen in edlem Bronze/Mattgold */
+  border: 2px solid #d4af37 !important; 
 }
 
-/* Das eigentliche Foto */
+/* Das eigentliche Foto im Inneren */
 .mein-foto {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Verhindert das Verzerren des Bildes */
-  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  
   /* Harte CSS-Kopiersperren */
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -129,13 +128,13 @@ footer a{color:inherit}
 
 /* Die unsichtbare Schutzschicht direkt über dem Foto */
 .foto-schloss {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  background: transparent; /* Unsichtbar */
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 2 !important;
+  background: transparent !important;
   cursor: default;
 }
 
