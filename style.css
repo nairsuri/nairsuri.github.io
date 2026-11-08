@@ -101,16 +101,13 @@ footer a{color:inherit}
   position: relative;
   width: 140px;  
   height: 140px; 
-  
   /* Das sorgt für die exakt gleiche Aufteilung links und rechts sowie Abstand nach unten */
   margin: 0 auto 1.5rem auto !important; 
-  
   border-radius: 1.25rem; 
   overflow: hidden;
   box-shadow: 0 8px 24px var(--shade);
   border: 1px solid var(--edge);
 }
-
 
 }
 
