@@ -101,14 +101,15 @@ footer a{color:inherit}
   position: relative;
   width: 140px;  
   height: 140px; 
-  /* Das sorgt für die exakt gleiche Aufteilung links und rechts sowie Abstand nach unten */
+  /* Zwingt das Flexbox-System der Karte, das Foto EXAKT in der Mitte zu platzieren */
+  align-self: center !important; 
+  /* Hält 1.5rem Abstand nach unten zum Namen und berechnet links/rechts automatisch */
   margin: 0 auto 1.5rem auto !important; 
   border-radius: 1.25rem; 
   overflow: hidden;
-  box-shadow: 0 8px 24px var(--shade);
-  border: 1px solid var(--edge);
-}
-
+  box-shadow: 0 8px 24px var(--shade), 0 0 12px color-mix(in srgb, #cd7f32 30%, transparent);
+  /* Dein dünner Rahmen in edlem Bronze */
+  border: 2px solid #cd7f32; 
 }
 
 /* Das eigentliche Foto */
@@ -117,7 +118,6 @@ footer a{color:inherit}
   height: 100%;
   object-fit: cover; /* Verhindert das Verzerren des Bildes */
   display: block;
-  
   /* Harte CSS-Kopiersperren */
   -webkit-user-select: none;
   -moz-user-select: none;
