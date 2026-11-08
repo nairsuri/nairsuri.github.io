@@ -34,7 +34,17 @@
   <h2>5. Ihre Rechte</h2>
   <p>Sie haben das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21). Außerdem können Sie sich bei einer Datenschutz-Aufsichtsbehörde beschweren, zum Beispiel bei der Behörde Ihres Bundeslandes.</p>
 </main>
-
+ <script>
+  // Bereinigt die Adresszeile vollautomatisch (entfernt index.html und .html Endungen)
+if (window.location.pathname.endsWith('/index.html')) {
+  var cleanUrl = window.location.protocol + "//" + window.location.host + window.location.pathname.replace(/\/index\.html$/, '/');
+  window.history.replaceState({}, document.title, cleanUrl);
+} else if (window.location.pathname.endsWith('.html')) {
+  var cleanUrl = window.location.protocol + "//" + window.location.host + window.location.pathname.replace(/\.html$/, '');
+  window.history.replaceState({}, document.title, cleanUrl);
+}
+ </script>
+  
 <footer class="glass">
   <a href="impressum.html">Impressum</a>
   <a href="datenschutz.html">Datenschutz</a>
