@@ -100,8 +100,8 @@ footer a{color:inherit}
 /* Container für das Foto und die Schutzschicht */
 .profile-container {
   position: relative !important;
-  width: 140px !important;  
-  height: 140px !important; 
+  width: 220px !important;  
+  height: 220px !important; 
   border-radius: 1.25rem !important; 
   overflow: hidden !important;
   box-shadow: 0 8px 24px var(--shade) !important;
